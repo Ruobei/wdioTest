@@ -2,6 +2,7 @@ const expect = require('chai').expect
 describe('somethings', function () {
     it("request test", async () => {
         browser.url("https://www.amazon.in/")
+        await browser.setupInterceptor(); 
 
         let input = await $("#twotabsearchtextbox")
         input.setValue("mobile")
